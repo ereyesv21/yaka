@@ -15,6 +15,7 @@ a{
     text-decoration: none;
 }
 
+/*header section*/
 header{
     width: 100%;
     margin: auto;
@@ -41,6 +42,7 @@ header nav a{
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     transition: 0.2s;
+    font-weight: 500;
     
 
 }
@@ -49,3 +51,282 @@ header nav a.active, header nav a:hover{
     background: #A85385;
     border-radius: 2px;
 }
+
+/*deslizador section*/
+
+.deslizador{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-top: -50px;
+}
+
+.deslizador .lista .elemento{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+
+.deslizador .lista .elemento img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.deslizador .lista .elemento .contenido{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+
+}
+
+
+.deslizador .lista .elemento .contenido .titulo{
+    font-size: 5em;
+    line-height: 1.3em;
+    font-family: "Rye", serif;
+}
+
+.deslizador .lista .elemento .button{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.deslizador .lista .elemento .button button{
+    border: none;
+    background-color: #D4AF37;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.4s;
+    letter-spacing: 2px;
+}
+
+.deslizador .lista .elemento .button button:hover{
+    letter-spacing: 3px;
+}
+
+
+.deslizador .lista .elemento .button button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+
+/* miniatura Section  */
+
+
+.miniatura{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.miniatura .elemento{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.miniatura .elemento img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+/*flechaCambiadora section*/
+
+.flechaCambiadora{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.flechaCambiadora button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #A85385;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.flechaCambiadora button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* Animation Part */
+
+.deslizador .lista .elemento:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.deslizador .lista .elemento:nth-child(1) .contenido .titulo,
+.deslizador .lista .elemento:nth-child(1) .contenido .button
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.deslizador .lista .elemento:nth-child(1) .contenido .titulo{
+    animation-delay: 0.4s !important;
+}
+
+.deslizador .lista .elemento:nth-child(1) .contenido .button{
+    animation-delay: 1s !important;
+}
+
+
+/* Animacion boton derecha*/
+.deslizador.derecha .lista .elemento:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.deslizador.derecha .miniatura .elemento:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+.deslizador.izquierda .lista .elemento img{
+    z-index: 100;
+}
+
+
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+
+
+.deslizador.derecha .miniatura{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+
+/* Animacion boton izquierda*/
+.deslizador.izquierda .lista .elemento:nth-child(2){
+    z-index: 2;
+}
+
+.deslizador.izquierda .lista .elemento:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.deslizador.izquierda .miniatura .elemento:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.deslizador.derecha .flechaCambiadora button,
+.deslizador.izquierda .flechaCambiadora button{
+    pointer-events: none;
+}
+
+
+.deslizador.izquierda .lista .elemento:nth-child(2) .contenido .title,
+.deslizador.izquierda .lista .elemento:nth-child(2) .contenido .button
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .deslizador .lista .elemento .contenido{
+        padding-right: 0;
+    }
+    .deslizador .lista .elemento .contenido .titulo{
+        font-size: 50px;
+    }
+}
+
+
