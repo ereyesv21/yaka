@@ -60,6 +60,7 @@ header nav a.active, header nav a:hover{
     overflow: hidden;
     position: relative;
     margin-top: -50px;
+    
 }
 
 .deslizador .lista .elemento{
@@ -72,8 +73,11 @@ header nav a.active, header nav a:hover{
 .deslizador .lista .elemento img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;    
 }
+
+
+
 
 .deslizador .lista .elemento .contenido{
     position: absolute;
@@ -137,6 +141,7 @@ header nav a.active, header nav a:hover{
     display: flex;
     gap: 20px;
     align-items: flex-end; /* Alinear elementos en la parte inferior */
+
 }
 
 .miniatura .elemento{
@@ -354,3 +359,26 @@ header nav a.active, header nav a:hover{
 }
 
 
+
+.indicador {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 100;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.punto.activo {
+    opacity: 1;
+}
