@@ -128,7 +128,7 @@ header nav a.active, header nav a:hover{
 /* miniatura Section  */
 
 
-.miniatura{
+.miniatura {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -136,6 +136,7 @@ header nav a.active, header nav a:hover{
     z-index: 100;
     display: flex;
     gap: 20px;
+    align-items: flex-end; /* Alinear elementos en la parte inferior */
 }
 
 .miniatura .elemento{
@@ -152,6 +153,29 @@ header nav a.active, header nav a:hover{
     border-radius: 20px;
     box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
 }
+
+.miniatura .elemento:first-child {
+    width: 20vw; /* Ancho responsivo (20% del ancho de la ventana) */
+    height: 60vh; /* Alto responsivo (30% de la altura de la ventana) */
+    border: 6px solid white; /* Borde blanco de 6px */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Media Queries para ajustar el tamaño en pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .miniatura .elemento:first-child {
+        width: 18vw; /* Ajustar el ancho en pantallas más pequeñas */
+        height: 50vh; /* Ajustar la altura en pantallas más pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .miniatura .elemento:first-child {
+        width: 15vw; /* Ajustar el ancho en pantallas muy pequeñas */
+        height: 40vh; /* Ajustar la altura en pantallas muy pequeñas */
+    }
+}
+
 
 
 
