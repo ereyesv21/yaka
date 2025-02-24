@@ -54,28 +54,40 @@ header nav a.active, header nav a:hover{
 
 /*deslizador section*/
 
-.deslizador{
+.deslizador {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
     margin-top: -50px;
-    
 }
 
-.deslizador .lista .elemento{
+.deslizador .lista .elemento {
     width: 100%;
     height: 100%;
     position: absolute;
     inset: 0 0 0 0;
 }
 
-.deslizador .lista .elemento img{
+.deslizador .lista .elemento img {
     width: 100%;
     height: 100%;
-    object-fit: cover;    
+    object-fit: cover;
+    object-position: center top; /* Ajusta la posición de la imagen */
+    display: block;
 }
 
+.deslizador .lista .elemento::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; /* Ajusta la altura del degradado según sea necesario */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    z-index: 1;
+    pointer-events: none; /* Asegura que el pseudo-elemento no interfiera con la interacción del usuario */
+}
 
 
 
