@@ -394,3 +394,13 @@ header nav a.active, header nav a:hover{
 .punto.activo {
     opacity: 1;
 }
+
+/* ---------------------------------Nuestras cervezas------------------------------------------*/
+
+.beer{
+    width: 100%;
+    height: 10%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    
+}
+
