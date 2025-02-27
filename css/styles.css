@@ -397,10 +397,23 @@ header nav a.active, header nav a:hover{
 
 /* ---------------------------------Nuestras cervezas------------------------------------------*/
 
-.beer{
-    width: 100%;
-    height: 10%;
-    object-fit: cover; /* Ajusta la imagen al contenedor */
-    
+.fondo{
+    background-image: url(../img/cervezasTodas.jpg);
+	padding: 400px 100px;
+	text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;  
+}
+
+.fondo:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
 }
 
