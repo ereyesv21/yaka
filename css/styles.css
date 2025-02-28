@@ -417,3 +417,10 @@ header nav a.active, header nav a:hover{
 	background-color: rgba(0,0,0,0.6);
 }
 
+.fondo h1{
+    font-family: 'RYE', sans-serif;
+    font-size: 60px;
+	color: #fff;
+	position: relative
+}
+
