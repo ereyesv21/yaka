@@ -395,7 +395,7 @@ header nav a.active, header nav a:hover{
     opacity: 1;
 }
 
-/* ---------------------------------Nuestras cervezas------------------------------------------*/
+/* ---------------------------------------Nuestras cervezas------------------------------------------*/
 
 .fondo{
     background-image: url(../img/cervezasTodas.jpg);
@@ -414,13 +414,29 @@ header nav a.active, header nav a:hover{
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0,0,0,0.6);
+	background-color: rgba(0, 0, 0, 0.749);
 }
 
 .fondo h1{
     font-family: 'RYE', sans-serif;
-    font-size: 60px;
+    font-size: 70px;
 	color: #fff;
-	position: relative
+	position: relative;
+    line-height: 1.2;
+    z-index: 2;
+    
+}
+
+.fondo span{
+    display: block; 
+    font-size: 65px; 
+    font-family: 'RYE', sans-serif;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.cervezas{
+    background: linear-gradient(60deg,#A85385,#422134);
 }
 
