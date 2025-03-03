@@ -397,46 +397,87 @@ header nav a.active, header nav a:hover{
 
 /* ---------------------------------------Nuestras cervezas------------------------------------------*/
 
-.fondo{
+.Contenedor-fondo{
     background-image: url(../img/cervezasTodas.jpg);
-	padding: 400px 100px;
+	padding: 300px 100px;
 	text-align: center;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;  
+
 }
 
-.fondo:before {
+.Contenedor-fondo:before {
 	content:'';
 	position: absolute;
     top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: rgba(0, 0, 0, 0.749);
+	background-color: rgba(0, 0, 0, 0.429);
 }
 
-.fondo h1{
+.Contenedor-fondo h1{
     font-family: 'RYE', sans-serif;
     font-size: 70px;
 	color: #fff;
-	position: relative;
-    line-height: 1.2;
-    z-index: 2;
-    
+	position: absolute;
+    top: 30%;
+    left: 53%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    line-height: 1.2; /*para que no se vea tan pegado al borde*/
+    z-index: 2; /*para que se vea por encima del fondo*/
+
 }
 
-.fondo span{
+.Contenedor-fondo h2{
     display: block; 
     font-size: 65px; 
     font-family: 'RYE', sans-serif;
     color: #fff;
-    position: relative;
+    position: absolute;
+    top: 40%;
+    left: 53%;
+    transform: translate(-50%, -50%); /* Centra el texto */
     z-index: 2;
+    
 }
 
 .cervezas{
     background: linear-gradient(60deg,#A85385,#422134);
 }
 
+.Tipos_cervezas img{
+    width: 500px;
+    height: 500px;
+    margin: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    border-radius: 2%;
+}
+
+
+
+
+/*------------------------------------Quienes somos---------------------------------- */
+
+.Fondo_contenedor{
+    background-image: url(../img/cervezaOriginal.webp);
+	padding: 300px 100px;
+	text-align: center;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;  
+
+}
+
+.Fondo_contenedor:before {
+	content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.471);
+}
