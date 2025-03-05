@@ -589,23 +589,81 @@ footer {
 
 /*------------------------------------Quienes somos---------------------------------- */
 
-.Fondo_contenedor{
-    background-image: url(../img/cervezaOriginal.webp);
-	padding: 300px 100px;
-	text-align: center;
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;  
 
-}
+.fondo_contenedor {
+    position: relative;  
+    min-height: 100vh; 
+    color: #fff;
+   
+    background:
+      
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 60%, 
+        #A85385 100%
+      ),
 
-.Fondo_contenedor:before {
-	content:'';
-	position: absolute;
-    top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: rgba(0, 0, 0, 0.471);
-}
+      url("../img/cervezaOriginal.webp") right center / cover no-repeat;
+  }
+  
+  /* Título arriba a la izquierda */
+  .titulo {
+    position: absolute;
+    top: 200px;
+    left: 130px;
+    font-family: 'RYE', sans-serif;
+    font-size: 4rem;              
+    margin: 0;
+  }
+  
+  .Fondo_contenedor {
+    position: relative;
+    min-height: 800px;
+    padding: 50px;
+    color: #fff;
+    background: 
+      linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.8) 60%, 
+        #A85385 100%
+      ),
+      url("../img/cervezaOriginal.webp") 
+        center right / cover no-repeat;
+  }
+  
+  .titulo {
+    font-family: 'RYE', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  }
+  
+  .nosotros {
+    display: flex;
+    align-items: flex-start; 
+    gap: 2rem;
+    margin-top: 20%;      
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+ 
+  .nosotros img {
+
+    width: 400px;
+    height: 300px;
+    background-color: #ccc; 
+    object-fit: cover;    
+  }
+  
+  /* Texto a la derecha */
+  .texto-derecha {
+    flex: 1;        
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  
+  
