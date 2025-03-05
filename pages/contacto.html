@@ -19,11 +19,11 @@
         </nav>
     </header>
     <main>
-        <section>
+        <section class="image-container">
             <video src=""></video>
-        </section>
-        <h1>Contacto</h1>
-        <section>
+            <h1 class="titulo-contacto">Contacto</h1>
+        <section class="form-section">
+            <div class="form-container">
             <form action="">
                 <fieldset>
                     <label for="name">Nombre:</label>
@@ -40,23 +40,86 @@
                     
                     <label for="edad">Edad:</label>
                     <input type="number" id="edad" name="edad" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" rows="5" required></textarea>
+
+                    <button type="submit">ENVIAR</button>
                 </fieldset>
+            </div>
         </section>
+        </section>
+
+        
     </main>
-    <footer>
-        <p>Derechos reservados</p>
-        <div class="contacto">
-            <h4>Oficina Principal</h4>
-            <p>Cra 33A 30-20, Bogotá</p>
-            <p>contactanos@yaka.com.co</p>
-            <p>+57 310897456</p>
+        <footer>
+        <div class="footer-top">
+          <div class="contact-item">
+            <i class="icon-location"></i>
+            <h3>Encuentranos</h3>
+            <p>1010 Avenue, SW 54321, Bogotá</p>
+          </div>
+          <div class="contact-item">
+            <i class="icon-phone"></i>
+            <h3>Llamanos</h3>
+            <p>+57 123-456-7894</p>
+          </div>
+          <div class="contact-item">
+            <i class="icon-mail"></i>
+            <h3>Contáctanos</h3>
+            <p>contacto@yaka.com.co</p>
+          </div>
         </div>
-        <div class="redes">
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Linkdn</p>
-            <p>Youtube</p>
+      
+        <!-- Contenido central -->
+        <div class="footer-middle">
+          <div class="footer-col">
+            <h2>Yaká <span>Cerveza Artesanal</span></h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit...
+            </p>
+            <h4>Follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="icon-facebook"></i></a>
+              <a href="#"><i class="icon-twitter"></i></a>
+              <a href="#"><i class="icon-google"></i></a>
+            </div>
+          </div>
+      
+          <!-- links -->
+          <div class="footer-col">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+      
+          <!--Suscripción -->
+          <div class="footer-col">
+            <h3>Suscribete</h3>
+            <p>No te pierdas nuestras promociones..</p>
+            <form>
+              <input type="email" placeholder="Email Address">
+              <button type="submit">➤</button>
+            </form>
+          </div>
         </div>
-    </footer>
+      
+        <!-- Barra inferior -->
+        <div class="footer-bottom">
+          <p>Copyright © 2023, All Right Reserved
+            <a href="../index.html" >Inicio</a>
+            <a href="./Nuestras_cervezas.html" class="active">Nuestras Cervezas</a>
+            <a href="./nosotros.html">Quienes Somos</a>
+            <a href="./maridajes.html">Maridajes</a>
+            <a href="./sostenibilidad.html">Sostenibilidad</a>
+            <a href="./contacto.html">Contacto</a>
+          </p>
+        </div>
+      </footer>
 </body>
 </html>
