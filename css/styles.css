@@ -447,17 +447,145 @@ header nav a.active, header nav a:hover{
 .cervezas{
     background: linear-gradient(60deg,#A85385,#422134);
 }
+.Tipos_cervezas {
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 20px;
 
-.Tipos_cervezas img{
+  }
+  
+  .Tipos_cervezas article {
+    
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    gap: 20px;                      
+    align-items: center;             
+    margin: 40px 0;      
+    color: white;            
+  }
+
+  .Tipos_cervezas article img {
     width: 500px;
     height: 500px;
-    margin: 50px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5); /* Sombra */
+    object-fit: cover; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 2%;
-}
+  }
+  
+  .Tipos_cervezas article p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 1em;
+  }
 
-
-
+/* footer Nuestras cervezas*/
+footer {
+    font-family: sans-serif; 
+    color: #fff;             
+    background-color: #1A050D; 
+  }
+  
+  /* ----- Barra superior (contacto) ----- */
+  .footer-top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #701F5D;
+  }
+  .footer-top .contact-item {
+    text-align: center;
+    max-width: 200px;
+  }
+  .footer-top h3 {
+    margin: 10px 0 5px;
+  }
+  .footer-top p {
+    margin: 0;
+  }
+  
+  /* ----- Contenido central ----- */
+  .footer-middle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 40px 60px;
+    
+  }
+  
+  /* Columnas del footer */
+  .footer-col h2, .footer-col h3, .footer-col h4 {
+    color: #A85385; 
+    margin-bottom: 15px;
+  }
+  .footer-col p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  .footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .footer-col ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer-col ul li a:hover {
+    color: #A85385;
+  }
+  
+  /* Redes sociales */
+  .social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1.4em;
+  }
+  .social-links a:hover {
+    color: #A85385;
+  }
+  
+  /* Formulario de suscripción */
+  .footer-col form {
+    display: flex;
+    margin-top: 10px;
+  }
+  .footer-col form input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+  }
+  .footer-col form button {
+    background-color: #A85385;
+    border: none;
+    color: #fff;
+    padding: 0 16px;
+    cursor: pointer;
+  }
+  .footer-col form button:hover {
+    background-color: #701F5D;
+  }
+  
+  /* ----- Barra inferior (copyright) ----- */
+  .footer-bottom {
+    background-color: #701F5D;
+    text-align: center;
+    padding: 15px 0;
+  }
+  .footer-bottom p {
+    margin: 0;
+  }
+  .footer-bottom a {
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+  }
+  .footer-bottom a:hover {
+    color: #A85385;
+  }
+  
 
 /*------------------------------------Quienes somos---------------------------------- */
 
