@@ -395,6 +395,7 @@ header nav a.active, header nav a:hover{
 /* *******************************************************Nuestras cervezas*******************************************************/
 
 
+<<<<<<< HEAD
 .fondo{
     background-image: url(../img/cervezasTodas.jpg);
 	padding: 400px 100px;
@@ -413,6 +414,13 @@ header nav a.active, header nav a:hover{
 	left: 0;
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.749);
+=======
+.beer{
+    width: 100%;
+    height: 10%;
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    
+>>>>>>> parent of d499455 (modificando la imagen de todas las cervezas en nuestra cervezas)
 }
 
 .fondo h1{
