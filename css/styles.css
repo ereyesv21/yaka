@@ -15,7 +15,7 @@ a{
     text-decoration: none;
 }
 
-/*header section*/
+/************************************************ header ****************************************************/
 header{
     width: 100%;
     margin: auto;
@@ -52,8 +52,9 @@ header nav a.active, header nav a:hover{
     border-radius: 2px;
 }
 
-/*deslizador section*/
 
+/************************************************  Inicio  ***********************************************************/
+/*deslizador section*/
 .deslizador {
     width: 100vw;
     height: 100vh;
@@ -73,7 +74,7 @@ header nav a.active, header nav a:hover{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* Ajusta la posición de la imagen */
+    object-position: center top; 
     display: block;
 }
 
@@ -83,10 +84,10 @@ header nav a.active, header nav a:hover{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 50%; /* Ajusta la altura del degradado según sea necesario */
+    height: 50%; 
     background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     z-index: 1;
-    pointer-events: none; /* Asegura que el pseudo-elemento no interfiera con la interacción del usuario */
+    pointer-events: none; 
 }
 
 
@@ -192,10 +193,6 @@ header nav a.active, header nav a:hover{
         height: 40vh; /* Ajustar la altura en pantallas muy pequeñas */
     }
 }
-
-
-
-
 
 
 
@@ -395,7 +392,8 @@ header nav a.active, header nav a:hover{
     opacity: 1;
 }
 
-/* ---------------------------------------Nuestras cervezas------------------------------------------*/
+/* *******************************************************Nuestras cervezas*******************************************************/
+
 
 .Contenedor-fondo{
     background-image: url(../img/cervezasTodas.jpg);
@@ -425,9 +423,9 @@ header nav a.active, header nav a:hover{
 	position: absolute;
     top: 30%;
     left: 53%;
-    transform: translate(-50%, -50%); /* Centra el texto */
-    line-height: 1.2; /*para que no se vea tan pegado al borde*/
-    z-index: 2; /*para que se vea por encima del fondo*/
+    transform: translate(-50%, -50%); 
+    line-height: 1.2; 
+    z-index: 2; 
 
 }
 
@@ -439,7 +437,7 @@ header nav a.active, header nav a:hover{
     position: absolute;
     top: 40%;
     left: 53%;
-    transform: translate(-50%, -50%); /* Centra el texto */
+    transform: translate(-50%, -50%); 
     z-index: 2;
     
 }
@@ -459,7 +457,7 @@ header nav a.active, header nav a:hover{
 
 
 
-/*------------------------------------Quienes somos---------------------------------- */
+/* **************************************Qhienes Somos *******************************************************/
 
 .Fondo_contenedor{
     background-image: url(../img/cervezaOriginal.webp);
@@ -481,3 +479,18 @@ header nav a.active, header nav a:hover{
 	right: 0;
 	background-color: rgba(0, 0, 0, 0.471);
 }
+
+
+/*****************************************Maridajes*******************************************************/
+
+
+/*****************************************Sostenibilidad*******************************************************/
+
+
+/*****************************************Contacto*******************************************************/
+
+
+/*****************************************Footer*******************************************************/
+
+/*****************************************Otros*******************************************************/
+/*****************************************Otros*******************************************************/
